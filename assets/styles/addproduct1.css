@@ -1,0 +1,43 @@
+.product_progress > h6 {
+  color: #000;
+  margin-bottom: 16px;
+}
+.product_question {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.product_question > div {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid var(--Colors-Black-black-100, #b0b0b0);
+}
+.product_question > div > input {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-right: 21px;
+}
+input[type="radio"]:checked:after {
+  width: 17px;
+  height: 17px;
+  border-radius: 15px;
+  top: 2px;
+  left: -2px;
+  position: relative;
+  background-color: #283891;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+.product_question > div > label {
+  color: var(--Colors-Black-black-300, #545454);
+  cursor: pointer;
+}

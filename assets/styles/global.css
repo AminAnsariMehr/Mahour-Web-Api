@@ -1,0 +1,411 @@
+:root {
+  --colors-blue-blue-200: #b6c0fb;
+  --colors-blue-blue-300: #95a3fa;
+  --colors-blue-blue-400: #8191f9;
+  --colors-blue-blue-50: #eff1fe;
+  --colors-blue-blue-100: #ced5fd;
+  --colors-blue-blue-500: #6176f7;
+  --colors-blue-blue-600: #586be1;
+  --colors-blue-blue-700: #4554af;
+  --colors-blue-blue-800: #354188;
+  --colors-blue-blue-900: #293268;
+  --colors-orange-orange-50: #fff6eb;
+  --colors-orange-orange-100: #ffe2c1;
+  --colors-orange-orange-200: #ffd5a3;
+  --colors-orange-orange-300: #ffc179;
+  --colors-orange-orange-400: #ffb55f;
+  --colors-orange-orange-500: #ffa337;
+  --colors-orange-orange-600: #e89432;
+  --colors-orange-orange-700: #b57427;
+  --colors-orange-orange-800: #8c5a1e;
+  --colors-orange-orange-900: #6b4417;
+  --colors-black-black-50: #e6e6e6;
+  --colors-black-black-100: #b0b0b0;
+  --colors-black-black-200: #8a8a8a;
+  --colors-black-black-300: #545454;
+  --colors-black-black-400: #333;
+  --colors-black-black-500: #000;
+  --colors-black-black-600: #000;
+  --colors-black-black-700: #000;
+  --colors-black-black-800: #000;
+  --colors-black-black-900: #000;
+  --colors-white-white-50: #fff;
+  --colors-white-white-100: #fff;
+  --colors-white-white-200: #fff;
+  --colors-white-white-300: #fff;
+  --colors-white-white-400: #fff;
+  --colors-white-white-500: #fff;
+  --colors-white-white-600: #e8e8e8;
+  --colors-white-white-700: #b5b5b5;
+  --colors-white-white-800: #8c8c8c;
+  --colors-white-white-900: #6b6b6b;
+  --colors-grey-grey-50: #f2f2f2;
+  --colors-grey-grey-100: #d8d8d8;
+  --colors-grey-grey-200: #c5c5c5;
+  --colors-grey-grey-300: #aaa;
+  --colors-grey-grey-400: #999;
+  --colors-grey-grey-500: #808080;
+  --colors-grey-grey-600: #747474;
+  --colors-grey-grey-700: #5b5b5b;
+  --colors-grey-grey-800: #464646;
+  --colors-grey-grey-900: #363636;
+  --colors-error-error-50: #feecec;
+  --colors-error-error-100: #fac3c3;
+  --colors-error-error-200: #f8a6a6;
+  --colors-error-error-300: #f57d7d;
+  --colors-error-error-400: #f36464;
+  --colors-error-error-500: #f03d3d;
+  --colors-error-error-600: #da3838;
+  --colors-error-error-700: #aa2b2b;
+  --colors-error-error-800: #842222;
+  --colors-error-error-900: #651a1a;
+  --colors-success-success-50: #e7faf0;
+  --colors-success-success-100: #b4f0cf;
+  --colors-success-success-200: #90e9b8;
+  --colors-success-success-300: #5ee098;
+  --colors-success-success-400: #3ed984;
+  --colors-success-success-500: #0ed065;
+  --colors-success-success-600: #0dbd5c;
+  --colors-success-success-700: #0a9448;
+  --colors-success-success-800: #087238;
+  --colors-success-success-900: #06572a;
+  --colors-warning-warning-50: #fff9e6;
+  --colors-warning-warning-100: #feebb1;
+  --colors-warning-warning-200: #fee28c;
+  --colors-warning-warning-300: #fdd457;
+  --colors-warning-warning-400: #fdcc36;
+  --colors-warning-warning-500: #fcbf04;
+  --colors-warning-warning-600: #e5ae04;
+  --colors-warning-warning-700: #b38803;
+  --colors-warning-warning-800: #8b6902;
+  --colors-warning-warning-900: #6a5002;
+  --colors-info-info-50: #e7f7ff;
+  --colors-info-info-100: #b3e5fe;
+  --colors-info-info-200: #8fd8fd;
+  --colors-info-info-300: #5cc7fc;
+  --colors-info-info-400: #3cbcfc;
+  --colors-info-info-500: #0babfb;
+  --colors-info-info-600: #0a9ce4;
+  --colors-info-info-700: #0879b2;
+  --colors-info-info-800: #065e8a;
+  --colors-info-info-900: #054869;
+  --gray-white: #fff;
+  --gray-500: #6d737a;
+  --gray-50: #e7e9eb;
+  --gray-600: #52565c;
+  --gray-black: #1b1d1f;
+  --gray-100: #cfd3d6;
+  --gray-700: #363a3d;
+  --2-nd-primary-300: #85a0fe;
+  --2-nd-primary-900: #21212f;
+  --2-nd-primary-500: #3461fd;
+  --2-nd-primary-50: #f1f2f8;
+}
+
+/* font starts */
+@font-face {
+  font-family: DanaVF;
+  src: local(DanaVF-Regular),
+    url(../font/DanaFaNum-Regular.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: DanaVF;
+  src: local(DanaVF-Medium), url(../font/DanaFaNum-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: DanaVF;
+  src: local(DanaVF-DemiBold),
+    url(../font/DanaFaNum-DemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: DanaVF;
+  src: local(DanaVF-Bold), url(../font/DanaFaNum-Bold.woff2) format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d1d1d1;
+  border-radius: 10px;
+}
+main {
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  direction: rtl;
+}
+ul {
+  list-style-type: none;
+  direction: rtl;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+}
+.Display1 {
+  font-family: DanaVF;
+  font-size: 64px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.Display2 {
+  font-family: DanaVF;
+  font-size: 56px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+.Header1 {
+  font-family: DanaVF;
+  font-size: 44px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.Header2 {
+  font-family: DanaVF;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.Header3 {
+  font-family: DanaVF;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.Header4 {
+  font-family: DanaVF;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.Header5 {
+  font-family: DanaVF;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.Header7 {
+  font-family: DanaVF;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.ButtonXL {
+  font-family: DanaVF;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.BodyXL {
+  font-family: DanaVF;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.BodyXL-r {
+  font-family: DanaVF;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.BodyLG {
+  font-family: DanaVF;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.BodyLG-r {
+  font-family: DanaVF;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.Header6 {
+  font-family: DanaVF;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.ButtonLG {
+  font-family: DanaVF;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.BodyMD {
+  font-family: DanaVF;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.OverlineLG {
+  font-family: DanaVF;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.BodyMD-r {
+  font-family: DanaVF;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.ButtonSM {
+  font-family: DanaVF;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+}
+.Captionlg {
+  font-family: DanaVF;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.BodySM {
+  font-family: DanaVF;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.BodySM-r {
+  font-family: DanaVF;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.OverlineSM {
+  font-family: DanaVF;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.Captionmd {
+  font-family: DanaVF;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.Captionsm {
+  font-family: DanaVF;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.Captionsm2 {
+  font-family: DanaVF;
+  font-size: 8px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+@media screen and (min-width: 1440px) {
+  body {
+    padding: 0 calc((100% - 1440px) / 2);
+  }
+}

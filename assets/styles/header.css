@@ -1,0 +1,134 @@
+header {
+  display: flex;
+  justify-content: center;
+  padding: 0px 82px;
+}
+.header_content {
+  max-width: 1278px;
+  width: 100%;
+  height: 84.96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search_box {
+  max-width: 522px;
+  width: 38.9%;
+  padding: 9.5px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid var(--foundation-blue-blue-100, #bcc1dd);
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.08);
+}
+.login_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.login_box > a:first-child {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--foundation-blue-blue-500, #283891);
+}
+.login_box > a:last-child {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8.1px 24px;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--foundation-blue-blue-500, #283891);
+}
+.login_box > a:last-child > span {
+  color: var(--gray-white, #fff);
+  text-align: center;
+}
+.search_city_box {
+  display: flex;
+  align-items: center;
+  padding: 0px 9px;
+  gap: 8px;
+  cursor: pointer;
+}
+.search_city_box > select {
+  color: #12182b;
+  text-align: center;
+  font-family: DanaVF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  border: none;
+  appearance: none;
+}
+.search_city_box > select:focus-visible {
+  border: none;
+  outline: none;
+}
+.search_city_pip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 4px;
+  flex-shrink: 0;
+}
+.search_city_pip > div {
+  width: 1px;
+  height: 24px;
+  min-width: 1px;
+  background: #d3d4da;
+}
+.search_city_input_box {
+  max-width: 408px;
+  width: 100%;
+}
+.search_city_input_box > input,
+.search_city_input_box > input::placeholder {
+  color: #12182b;
+  text-align: right;
+  font-family: DanaVF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.search_city_input_box > input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0px;
+}
+.menu_box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+.menu_box > img {
+  max-width: 45px;
+  max-height: 45px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu_box > button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media screen and (max-width: 1270px) {
+  header {
+    padding: 0px 15px;
+  }
+}

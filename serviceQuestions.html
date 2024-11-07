@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/styles/addproduct.css" />
+  <link rel="stylesheet" href="./assets/styles/addproduct1.css" />
+  <link rel="stylesheet" href="./assets/styles/addproduct2.css" />
+  <link rel="stylesheet" href="./assets/styles/global.css" />
+  <link rel="stylesheet" href="./assets/styles/header.css" />
+  <link rel="stylesheet" href="./assets/styles/bottomTab.css" />
+
+  <title>Maahora Web</title>
+</head>
+
+<body>
+
+  <!-- End Header -->
+  <main>
+    <div class="product_progress_box">
+      <div class="product_progress">
+
+
+        <!------------------------ Start add_product_progress_info ------------------------>
+        <div class="add_product_progress_info">
+          <div class="product_info_prog">
+            <img src="./assets/svg/test.svg" alt="">
+            <div>
+              <p>هزینه خدمات :</p>
+              <span class="Header7" id="serviceTotalPrice"></span>
+              <span class="Header7">تومان</span>
+            </div>
+          </div>
+          <div class="product_info_prog">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="44" viewBox="0 0 45 44" fill="none">
+              <path d="M22.5 14.6665V21.9998L27.0833 26.5832" stroke="#283891" stroke-width="2.75"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M8.45273 12.5961L7.07774 12.603C7.08152 13.357 7.69182 13.9673 8.44581 13.9711L8.45273 12.5961ZM13.1127 13.9945C13.872 13.9984 14.4907 13.3859 14.4945 12.6265C14.4984 11.8671 13.8859 11.2484 13.1265 11.2446L13.1127 13.9945ZM9.80426 7.92237C9.80043 7.16298 9.18175 6.55046 8.42237 6.55428C7.66298 6.55811 7.05046 7.1768 7.05429 7.93617L9.80426 7.92237ZM7.375 22C7.375 21.2406 6.75939 20.625 6 20.625C5.24062 20.625 4.625 21.2406 4.625 22H7.375ZM31.4384 37.4829C32.0958 37.1026 32.3204 36.2615 31.9402 35.6041C31.56 34.9468 30.7188 34.722 30.0616 35.1025L31.4384 37.4829ZM35.6025 29.5616C35.222 30.2188 35.4468 31.06 36.1041 31.4402C36.7615 31.8204 37.6026 31.5958 37.9829 30.9384L35.6025 29.5616ZM9.92394 9.29731C9.3843 9.8316 9.37995 10.7022 9.91426 11.2418C10.4485 11.7815 11.3191 11.7858 11.8588 11.2515L9.92394 9.29731ZM35.0809 9.41941C28.0772 2.41571 16.7595 2.3448 9.80215 9.30215L11.7467 11.2467C17.6117 5.38166 27.1882 5.41574 33.1365 11.364L35.0809 9.41941ZM9.80215 9.30215L7.48045 11.6238L9.425 13.5684L11.7467 11.2467L9.80215 9.30215ZM8.44581 13.9711L13.1127 13.9945L13.1265 11.2446L8.45964 11.2211L8.44581 13.9711ZM9.82771 12.5892L9.80426 7.92237L7.05429 7.93617L7.07774 12.603L9.82771 12.5892ZM22.5 6.875C30.8532 6.875 37.625 13.6467 37.625 22H40.375C40.375 12.1279 32.3721 4.125 22.5 4.125V6.875ZM22.5 37.125C14.1467 37.125 7.375 30.3532 7.375 22H4.625C4.625 31.8721 12.6279 39.875 22.5 39.875V37.125ZM30.0616 35.1025C27.8383 36.3885 25.2572 37.125 22.5 37.125V39.875C25.7536 39.875 28.8079 39.0045 31.4384 37.4829L30.0616 35.1025ZM37.625 22C37.625 24.7572 36.8885 27.3383 35.6025 29.5616L37.9829 30.9384C39.5045 28.3079 40.375 25.2536 40.375 22H37.625ZM11.8588 11.2515C14.593 8.54441 18.3502 6.875 22.5 6.875V4.125C17.5966 4.125 13.1521 6.10117 9.92394 9.29731L11.8588 11.2515Z"
+                fill="#283891" />
+            </svg>
+            <div>
+              <p>زمان مورد نیاز :</p>
+              <span class="Header7" id="serviceTime"></span>
+              <span class="Header7">ساعت</span>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <path
+              d="M44 22C44 34.1503 34.1503 44 22 44C9.84974 44 0 34.1503 0 22C0 9.84974 9.84974 0 22 0C34.1503 0 44 9.84974 44 22ZM4.82797 22C4.82797 31.4839 12.5161 39.172 22 39.172C31.4839 39.172 39.172 31.4839 39.172 22C39.172 12.5161 31.4839 4.82797 22 4.82797C12.5161 4.82797 4.82797 12.5161 4.82797 22Z"
+              fill="#D9D9D9" />
+            <path
+              d="M41.1788 18.0267C42.4842 17.7562 43.3361 16.4727 42.9243 15.2047C41.9886 12.3236 40.4651 9.65812 38.4407 7.38142C36.4163 5.10472 33.9473 3.27997 31.1953 2.01385C29.9842 1.45661 28.6099 2.1525 28.1886 3.4174C27.7674 4.6823 28.4618 6.03435 29.6552 6.62868C31.6115 7.60297 33.3707 8.94523 34.8327 10.5895C36.2948 12.2338 37.4221 14.1379 38.161 16.1947C38.6117 17.4494 39.8733 18.2972 41.1788 18.0267Z"
+              fill="#283891" />
+          </svg>
+        </div>
+        <!-------------------------- End add_product_progress_info -------------------------->
+
+
+
+        <h6 class="Header7" id="questionTitle" "></h6>
+      </div>
+
+
+      <form class=" product_question" id="questionOptions">
+          </form>
+          <!-- Start bottom btn -->
+          <div class="add_product_btn">
+            <button class="ButtonXL next_btn" id="nextBtn">مرحله بعد</button>
+            <button class="ButtonXL before_btn" id="prevBtn">مرحله قبل</button>
+          </div>
+          <!-- End bottom btn -->
+      </div>
+  </main>
+
+
+  <script src="./assets/js/Question.js" type="module"></script>
+</body>
+
+</html>
