@@ -6,24 +6,33 @@ const questionTitle = document.getElementById("questionTitle");
 const questionOptions = document.getElementById("questionOptions");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
-const result = { totalPrice: 0, company: "some", time: 100, answers: {} };
+const result = {
+    price: +data.price,
+    company: "some",
+    time: data.time,
+    answers: {},
+};
 let question;
 
 nextBtn.addEventListener("click", () => {
     const selectedRadio = document.querySelectorAll(
-        `[name="${question.id}"]:checked`,
+        `[name="${question.id}"]:checked`
     );
-    // -------------- for checkbox inputs ---------------
+
     if (selectedRadio.length > 1) {
-        selectedRadio.forEach(checked => {
-            result.answers[checked.name] = result.answers[checked.name]
-                ? [...result.answers[checked.name], +checked.value]
-                : [+checked.value];
+        selectedRadio.forEach(({ name, value }) => {
+            result.answers[name] = result.answers[name]
+                ? [...result.answers[name], +value]
+                : [+value];
+
+            updateServiceStatus(+name, +value);
         });
         handleShowQuestion(question.target_question_id);
     } else {
         const [target] = selectedRadio;
         result.answers[target.name] = +target.value;
+
+        updateServiceStatus(+target.name, +target.value);
 
         const targetQuestionID =
             question.options.find(({ id }) => id === +target.value)
@@ -31,19 +40,31 @@ nextBtn.addEventListener("click", () => {
 
         handleShowQuestion(targetQuestionID);
     }
-    console.log(result)
 });
 
 prevBtn.addEventListener("click", () => {
-    const lastAnsweredQuestionID = Object.keys(result.answers).at(-1);
+    const [lastAnsweredQuestionID, lastAnsweredOptions] = Object.entries(
+        result.answers
+    ).at(-1);
 
+    if (Array.isArray(lastAnsweredOptions)) {
+        lastAnsweredOptions.forEach(option =>
+            updateServiceStatus(+lastAnsweredQuestionID, option, "prev")
+        );
+    } else {
+        updateServiceStatus(
+            +lastAnsweredQuestionID,
+            lastAnsweredOptions,
+            "prev"
+        );
+    }
+
+    delete result.answers[lastAnsweredQuestionID];
     handleShowQuestion(+lastAnsweredQuestionID);
 });
 
 const getData = () => {
-    servicePrice.innerText = data.price;
-    serviceTime.innerText = data.time;
-
+    updateServiceStatus();
     handleShowQuestion(data.questions[0].id);
 };
 
@@ -52,15 +73,58 @@ const handleShowQuestion = questionID => {
 
     questionTitle.innerText = question.title;
     questionOptions.innerHTML = question.options
-        .map(option => radioOption(question.id, option.id, option.title))
+        .map(option =>
+            questionOption(
+                question.id,
+                option.id,
+                option.title,
+                question.max > 1 ? "checkbox" : "radio"
+            )
+        )
         .join("");
+
+    btnDisableEnable();
 };
 
-const radioOption = (questionID, optionID, optionTitle) => {
+const updateServiceStatus = (questionID, optionID, status = "next") => {
+    if (questionID && optionID) {
+        const { price, time } = data.questions
+            .find(item => item.id === questionID)
+            .options.find(option => option.id === optionID);
+
+        if (status === "next") {
+            result.price += price;
+            result.time += time;
+        } else {
+            result.price -= price;
+            result.time -= time;
+        }
+    }
+
+    servicePrice.innerText = result.price;
+    serviceTime.innerText = result.time;
+};
+
+const questionOption = (questionID, optionID, optionTitle, inputType) => {
     return `<div>
-          <input type="radio" name="${questionID}" id="${optionID}" value="${optionID}" />
+          <input type="${inputType}" name="${questionID}" id="${optionID}" value="${optionID}" />
           <label for="${optionID}" class="Header7">${optionTitle}</label>
         </div>`;
+};
+
+const btnDisableEnable = () => {
+    const indexOfQuestion = data.questions.findIndex(
+        ({ id }) => id === question.id
+    );
+
+    prevBtn.removeAttribute("disabled");
+    nextBtn.removeAttribute("disabled");
+
+    if (indexOfQuestion === 0) {
+        prevBtn.setAttribute("disabled", true);
+    } else if (indexOfQuestion === data.questions.length - 1) {
+        nextBtn.setAttribute("disabled", true);
+    }
 };
 
 getData();

@@ -112,3 +112,9 @@ main {
   background: var(--Colors-Blue-blue-500, #283891);
   color: #fff;
 }
+
+button:disabled {
+  border: 1px solid var(--colors-black-black-300);
+  background-color: var(--colors-black-black-300);
+  color: #222;
+}
