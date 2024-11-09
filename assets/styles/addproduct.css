@@ -99,8 +99,29 @@ main {
   border-radius: 10px;
   border: 1px solid var(--Colors-Blue-blue-500, #283891);
   color: var(--Colors-Blue-blue-500, #283891);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .next_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 308px;
+  width: 100%;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--Colors-Blue-blue-500, #283891);
+  color: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.submit_btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,4 +138,46 @@ button:disabled {
   border: 1px solid var(--colors-black-black-300);
   background-color: var(--colors-black-black-300);
   color: #222;
+}
+.submit_btn:disabled,
+.next_btn:disabled {
+  display: none;
+}
+
+.totalProgress {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgb(217, 217, 217);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.currentProgress {
+  width: 45px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  --s: 0deg; /* starting angle */
+  --p: 210deg; /* filling angle */
+  background: rgb(40, 56, 145);
+  mask: conic-gradient(
+    from var(--s),
+    #0000,
+    #000 1deg var(--p),
+    #0000 calc(var(--p) + 1deg)
+  );
+}
+
+.backGroundTransparent {
+  width: 38px;
+  aspect-ratio: 1;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

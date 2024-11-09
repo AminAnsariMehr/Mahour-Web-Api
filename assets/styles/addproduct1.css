@@ -24,15 +24,17 @@
   cursor: pointer;
   margin-right: 21px;
 }
+
 input[type="radio"]:checked:after {
+  content: "";
   width: 17px;
   height: 17px;
   border-radius: 15px;
-  top: 2px;
-  left: -2px;
+  top: 0;
+  left: 0;
+  transform: translate(-3px, 2.5px);
   position: relative;
   background-color: #283891;
-  content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;

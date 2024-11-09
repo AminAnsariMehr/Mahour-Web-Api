@@ -1,61 +1,63 @@
-html body .product_question {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: 410px;
-    overflow: auto;
-    overflow-x: hidden;
-    padding: 0 62px;
+.product_question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  height: 410px;
+  margin: 0 62px;
+  position: relative;
 }
-.product_progress {
-    width: calc(100% - 124px);
-    height: unset;
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    padding: 0px 62px;
-    margin-top: 21px;
-}
-.text_form{
-    position: relative;
-    margin-top: 32px;
-}
-.text_form textarea{
-    border-radius: 5px;
-    border: 1px solid var(--Colors-Black-black-100, #B0B0B0);
-    color: #333;
-    text-align: right;
-    font-family: DanaVF;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 180%;
-    text-transform: capitalize;
-    width: 100%;
-    max-width: 598px;
-    padding: 17px 53px 0 20px;
-    outline: none;
-}
-.text_form svg{
-    position: absolute;
-    top: 23px;
-    right: 19px;
-}
-.select_form{
-    margin-top: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-.select_form select{
-    font-family: DanaVF;
 
-    padding: 12px 18px;
-    border-radius: 5px;
-    border: 1px solid var(--Colors-Black-black-100, #B0B0B0);
+.product_progress {
+  width: calc(100% - 124px);
+  height: unset;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 62px;
+  margin-top: 21px;
 }
-html body input[type="checkbox"]{
-    accent-color: #283891;
-    width: 20px;
+
+.text_form {
+  position: relative;
+}
+
+.product_question textarea {
+  border-radius: 5px;
+  border: 1px solid var(--Colors-Black-black-100, #b0b0b0);
+  color: #333;
+  text-align: right;
+  font-family: DanaVF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 180%;
+  text-transform: capitalize;
+  width: 100%;
+  max-width: 598px;
+  padding: 17px 53px 0 20px;
+  outline: none;
+}
+.product_question .textArea-svg {
+  position: absolute;
+  top: 23px;
+  right: 19px;
+}
+.select_form {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.select_form select {
+  font-family: DanaVF;
+
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: 1px solid var(--Colors-Black-black-100, #b0b0b0);
+}
+html body input[type="checkbox"] {
+  accent-color: #283891;
+  width: 20px;
 }
